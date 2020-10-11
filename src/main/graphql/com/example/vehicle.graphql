@@ -1,8 +1,0 @@
-query Vehicle($id:ID!) {
-    vehicle(id: $id)
-    {
-        id,
-        type,
-        modelCode
-    }
-}

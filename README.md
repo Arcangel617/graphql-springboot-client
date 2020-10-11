@@ -1,17 +1,12 @@
-# graphql-api
+# graphql-springboot-client
 
-First of all you need to download the schema associated to your graphql api:
-```bash
-./gradlew downloadApolloSchema --endpoint="http://localhost:8080/graphql" \
-    --schema="src/main/graphql/com/example/schema.json"
-```
+## Samples
+curl:
+```shell script
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  --data '{ "query": "{ vehicle(id: 1) { id type modelCode } }" }' \
+  http://localhost:8080/graphql
+````
 
-**Note:** In some case you will need to provide some headers in order to get access to the resource
-
-```bash
-./gradlew downloadApolloSchema --endpoint="http://localhost:8080/graphql" \
-    --schema="src/main/graphql/com/example/schema.json \
-    --header="Accept: application/json" \
-    --header="Content-Type: application/json" \
-    --header="some-header: some-value"
-```
