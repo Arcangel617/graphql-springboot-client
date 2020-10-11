@@ -1,0 +1,8 @@
+query Vehicles($count:Int) {
+    vehicles(count: $count)
+    {
+        id,
+        type,
+        modelCode
+    }
+}
